@@ -18,7 +18,7 @@ function Controller($scope) {
   };
   $scope.status = "DISCONNECTED";
 
-  require(["lsClient","Subscription"], function(lsClient,Subscription) {
+  require(["./lsClient","Subscription"], function(lsClient,Subscription) {
     lsClient.addListener({
       onStatusChange: function(newStatus) {
         $scope.status = newStatus;
