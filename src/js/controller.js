@@ -17,9 +17,11 @@ function Controller($scope) {
   $scope.items = {
   };
   
+  var items = ["item1","item2","item3","item4","item5","item6","item7","item8","item9","item10"];
+  
   require(["js/lsClient","Subscription"], function(lsClient,Subscription) {
     
-    var subscription = new Subscription("MERGE",["item1","item2"],["stock_name","last_price"]);
+    var subscription = new Subscription("MERGE",items,["stock_name","last_price"]);
     subscription.setDataAdapter("QUOTE_ADAPTER");
     
     subscription.addListener({
