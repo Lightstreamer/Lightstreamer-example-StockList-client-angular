@@ -1,0 +1,4 @@
+.settings/
+.project
+src/js/lightstreamer.js
+src/js/require.js
