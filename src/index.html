@@ -25,6 +25,8 @@
     <script src="js/require.js"></script>
     <script src="js/lightstreamer.js"></script>
     <script src="js/controller.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
   </head>
   <body ng-cloak>
   <a href="https://github.com/Weswit/Lightstreamer-example-StockList-client-angular" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:1" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
@@ -32,7 +34,6 @@
   <a href="http://www.lightstreamer.com" target="_blank"><img src="images/logo.png" alt="LIGHTSTREAMER" hspace="0" border="0" /></a>
   
   <div ng-controller="Controller">
-    <div>{{status}}</div>
   
     <div ng-repeat="item in items">
       <span>{{item.stock_name}}</span>:<span>{{item.last_price}}</span>

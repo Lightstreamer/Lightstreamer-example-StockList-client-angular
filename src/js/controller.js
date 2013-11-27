@@ -16,15 +16,8 @@ Copyright 2013 Weswit s.r.l.
 function Controller($scope) {
   $scope.items = {
   };
-  $scope.status = "DISCONNECTED";
-
+  
   require(["js/lsClient","Subscription"], function(lsClient,Subscription) {
-    lsClient.addListener({
-      onStatusChange: function(newStatus) {
-        $scope.status = newStatus;
-        $scope.$apply();
-      }
-    });
     
     var subscription = new Subscription("MERGE",["item1","item2"],["stock_name","last_price"]);
     subscription.setDataAdapter("QUOTE_ADAPTER");
