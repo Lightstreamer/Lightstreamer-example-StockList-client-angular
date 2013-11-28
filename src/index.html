@@ -21,6 +21,8 @@
 
 <html ng-app="ls_angular">
   <head>
+    <title>Lightstreamer :: AngularJS & ng-grid :: Stock-List Demo</title>
+  
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular.min.js"></script>
     <script src="js/require.js"></script>
     <script src="js/lightstreamer.js"></script>
@@ -33,7 +35,7 @@
     <div id="wrap">
       <div>
         <a id="logo" href="http://www.lightstreamer.com" target="_blank"><img src="images/logo.png" alt="LIGHTSTREAMER" hspace="0" border="0" /></a>
-        <a id="logo" href="http://angularjs.org/" target="_blank"><img src="images/angular.png" alt="LIGHTSTREAMER" hspace="0" border="0" /></a>
+        <a id="logoAngular" href="http://angularjs.org/" target="_blank"><img src="images/angular.png" alt="LIGHTSTREAMER" hspace="0" border="0" /></a>
         
         <div id="title">ANGULARJS :: BASIC STOCK-LIST DEMO</div>
       </div>
@@ -58,6 +60,7 @@
                   <td>Open</td>
                 </tr>
               </thead>
+              <tbody>
                 <tr ng-repeat="item in items">
                   <td>{{item.stock_name}}</td>
                   <td>{{item.last_price}}</td>
