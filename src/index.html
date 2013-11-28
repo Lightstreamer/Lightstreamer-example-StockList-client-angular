@@ -37,20 +37,30 @@
         <a id="logo" href="http://www.lightstreamer.com" target="_blank"><img src="images/logo.png" alt="LIGHTSTREAMER" hspace="0" border="0" /></a>
         <a id="logoAngular" href="http://angularjs.org/" target="_blank"><img src="images/angular.png" alt="LIGHTSTREAMER" hspace="0" border="0" /></a>
         
-        <div id="title">ANGULARJS :: BASIC STOCK-LIST DEMO</div>
+        <div id="title">BASIC STOCK-LIST DEMO</div>
       </div>
       
       <div id="content">
+        <div class="desc mainDesc">
+          These demos show the integration between Lightstreamer JavaScript Client library and Google's AngularJS.<br/>
+          <br/>
+          To learn more visit the <a href="https://github.com/Weswit/Lightstreamer-example-StockList-client-angular">project page on github</a> 
+          and explore the source code of the application.
+         </div>
         <h2>Access by name</h2>
+        <div class="desc">
+          In this first example the model behind the view is made by a JSON object that is expanded by angular using a single ng-repeat directive.
+          Each item is indexed in the object by item name: the resulting iteration produces a table that is not ordered.
+        </div> 
         <div ng-controller="Controller">
           <table>
               <thead>
                 <tr>
                   <td>Name</td>
                   <td>Last</td>
-                  <td>Time</td>  
-                  <td>Change</td>  
-                  <td>Bid Size</td>  
+                  <td>Time</td>
+                  <td>Change</td>
+                  <td>Bid Size</td>
                   <td>Bid</td>
                   <td>Ask</td>
                   <td>Ask Size</td>
@@ -62,7 +72,7 @@
               </thead>
               <tbody>
                 <tr ng-repeat="item in items">
-                  <td>{{item.stock_name}}</td>
+                  <td class="leftAlign">{{item.stock_name}}</td>
                   <td>{{item.last_price}}</td>
                   <td>{{item.time}}</td>  
                   <td>{{item.pct_change}}</td>  
@@ -81,6 +91,10 @@
         </div>
         
         <h2>Iterate through index</h2>
+        <div class="desc">
+          In this case the model is composed by an Array of Arrays that is expanded using two nested ng-repeat directives.
+          Each item keeps its own index in the resulting array, that's why the table results sorted by stock name.
+        </div>
         <div ng-controller="Controller_index">
           <table>
             <thead>
@@ -101,13 +115,17 @@
             </thead>
             <tbody>
               <tr ng-repeat="item in items track by $index">
-                <td ng-repeat="field in item track by $index">{{field}}</td>
+                <td ng-repeat="field in item track by $index" ng-class="{leftAlign: $index==0}">{{field}}</td>
               </tr>
             </tbody>
           </table>
         </div>
         
         <h2>Use <a href="http://angular-ui.github.io/ng-grid/" target="_blank">ng-grid</a></h2>
+        <div class="desc">
+          In this case the view is composed by ng-grid (thus the model behind is structured as ng-grid requires). 
+          This makes to manipulate the data using all the features exposed by that library.
+        </div>
         <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
         <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.7/ng-grid.css"/>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.7/ng-grid.js"></script>

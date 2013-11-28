@@ -63,19 +63,20 @@ app.controller('Controller_grid', function($scope) {
   $scope.items =  [];
   $scope.gridOptions = { 
       data: 'items', 
+      enableColumnResize: true,
       columnDefs: [
-                   {field:'stock_name', displayName:'Name', width:"160px"},
-                   {field:'last_price', displayName:'Price'},
-                   {field:'time', displayName:'Time'},
-                   {field:'pct_change', displayName:'Change'},
-                   {field:'bid_quantity', displayName:'Bid Size'},
-                   {field:'bid', displayName:'Bid'},
-                   {field:'ask', displayName:'Ask'},
-                   {field:'ask_quantity', displayName:'Ask Size'},
-                   {field:'min', displayName:'Min'},
-                   {field:'max', displayName:'Max'},
-                   {field:'ref_price', displayName:'Ref.'},
-                   {field:'open_price', displayName:'Open'}
+                   {field:'stock_name', displayName:'Name', width:"157px", cellClass: "leftAlign ngSmallFont"},
+                   {field:'last_price', displayName:'Price', cellClass: "rightAlign ngSmallFont"},
+                   {field:'time', displayName:'Time', width:"80px", cellClass: "rightAlign ngSmallFont"},
+                   {field:'pct_change', displayName:'Change', cellClass: "rightAlign ngSmallFont"},
+                   {field:'bid_quantity', displayName:'Bid Size', cellClass: "rightAlign ngSmallFont"},
+                   {field:'bid', displayName:'Bid', cellClass: "rightAlign ngSmallFont"},
+                   {field:'ask', displayName:'Ask', cellClass: "rightAlign ngSmallFont"},
+                   {field:'ask_quantity', displayName:'Ask Size', cellClass: "rightAlign ngSmallFont"},
+                   {field:'min', displayName:'Min', cellClass: "rightAlign ngSmallFont"},
+                   {field:'max', displayName:'Max', cellClass: "rightAlign ngSmallFont"},
+                   {field:'ref_price', displayName:'Ref.', cellClass: "rightAlign ngSmallFont"},
+                   {field:'open_price', displayName:'Open', cellClass: "rightAlign ngSmallFont"}
                   ],
      
   };
