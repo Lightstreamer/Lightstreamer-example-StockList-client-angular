@@ -5,16 +5,23 @@ body {
 }
 table {
   border-collapse: collapse;
+  width: 770px;
 }
-thead tr {
+thead tr, .ngHeaderText {
+  font-family: Verdana, Arial, Helvetica, Sans-serif;
   background-color: #9D3534;
   color: #eeeeee;
+  font-weight: bold;
 }
+
+h2 a {
+  color:black;
+}
+
 #wrap {
   margin: 0 auto;
   width: 776px;
 }
-
 
 #logo {
   float: left;
@@ -31,7 +38,12 @@ thead tr {
   padding-top: 25px;
 }
 
-
 #content {
   clear:both;
+}
+
+.gridStyle {
+    border: 1px solid rgb(212,212,212);
+    width: 770px; 
+    height: 300px
 }

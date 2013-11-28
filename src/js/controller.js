@@ -44,7 +44,7 @@ function Controller_index($scope) {
     
     subscription.addListener({
       onItemUpdate: function(info) {
-        var itemPos = info.getItemPos();
+        var itemPos = info.getItemPos()-1;
         if (!$scope.items[itemPos]) {
           $scope.items[itemPos] = [];
         }
@@ -57,3 +57,49 @@ function Controller_index($scope) {
     });
   });
 }  
+
+var app = angular.module('ls_angular', ['ngGrid']);
+app.controller('Controller_grid', function($scope) {
+  $scope.items =  [];
+  $scope.gridOptions = { 
+      data: 'items', 
+      columnDefs: [
+                   {field:'stock_name', displayName:'Name', width:"160px"},
+                   {field:'last_price', displayName:'Price'},
+                   {field:'time', displayName:'Time'},
+                   {field:'pct_change', displayName:'Change'},
+                   {field:'bid_quantity', displayName:'Bid Size'},
+                   {field:'bid', displayName:'Bid'},
+                   {field:'ask', displayName:'Ask'},
+                   {field:'ask_quantity', displayName:'Ask Size'},
+                   {field:'min', displayName:'Min'},
+                   {field:'max', displayName:'Max'},
+                   {field:'ref_price', displayName:'Ref.'},
+                   {field:'open_price', displayName:'Open'}
+                  ],
+     
+  };
+  
+  require(["js/subscription"], function(subscription) {
+    
+    subscription.addListener({
+      onItemUpdate: function(info) {
+        var itemPos = info.getItemPos()-1;
+        
+        if (!$scope.items[itemPos]) {
+          for (var i=0; i<=itemPos; i++) {//ng-grid does not like empty elements in the array
+            if (!$scope.items[i]) {
+              $scope.items[i] = {};
+            }
+          }
+        }
+        
+        info.forEachChangedField(function(fieldName,fieldPos,val) {
+          $scope.items[itemPos][fieldName] = val;
+        });
+        
+        $scope.$apply();
+      }
+    });
+  });
+});
