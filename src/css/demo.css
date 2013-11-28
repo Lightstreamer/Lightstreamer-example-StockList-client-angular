@@ -1,5 +1,37 @@
 body {
-	
-	padding: 25px;
-	
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: 'helvetica neue', Helvetica, Arial;
+}
+table {
+  border-collapse: collapse;
+}
+thead tr {
+  background-color: #9D3534;
+  color: #eeeeee;
+}
+#wrap {
+  margin: 0 auto;
+  width: 776px;
+}
+
+
+#logo {
+  float: left;
+}
+
+#title {
+  font-family: Verdana, Arial, Helvetica, Sans-serif;
+  font-size: 9pt;
+  font-weight: bold;
+  text-align: right;
+  float: left;
+  left: 100px;
+  position: relative;
+  padding-top: 25px;
+}
+
+
+#content {
+  clear:both;
 }

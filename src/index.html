@@ -30,15 +30,21 @@
   </head>
   <body ng-cloak>
   <a href="https://github.com/Weswit/Lightstreamer-example-StockList-client-angular" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:1" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    <div id="wrap">
+      <div>
+        <a id="logo" href="http://www.lightstreamer.com" target="_blank"><img src="images/logo.png" alt="LIGHTSTREAMER" hspace="0" border="0" /></a>
+        <a id="logo" href="http://angularjs.org/" target="_blank"><img src="images/angular.png" alt="LIGHTSTREAMER" hspace="0" border="0" /></a>
+        
+        <div id="title">ANGULARJS :: BASIC STOCK-LIST DEMO</div>
+      </div>
+      
+      <div id="content">
+        <div ng-controller="Controller">
   
-  <a href="http://www.lightstreamer.com" target="_blank"><img src="images/logo.png" alt="LIGHTSTREAMER" hspace="0" border="0" /></a>
-  
-  <div ng-controller="Controller">
-  
-    <div ng-repeat="item in items">
-      <span>{{item.stock_name}}</span>:<span>{{item.last_price}}</span>
-    </div>
-    
+          <div ng-repeat="item in items">
+            <span>{{item.stock_name}}</span>:<span>{{item.last_price}}</span>
+          </div>
+        </div>  
     
   </body>
 </html>
