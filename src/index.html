@@ -39,12 +39,73 @@
       </div>
       
       <div id="content">
+        <h2>Access by name</h2>
         <div ng-controller="Controller">
-  
-          <div ng-repeat="item in items">
-            <span>{{item.stock_name}}</span>:<span>{{item.last_price}}</span>
-          </div>
-        </div>  
+          <table>
+              <thead>
+                <tr>
+                  <td>Name</td>
+                  <td>Last</td>
+                  <td>Time</td>  
+                  <td>Change</td>  
+                  <td>Bid Size</td>  
+                  <td>Bid</td>
+                  <td>Ask</td>
+                  <td>Ask Size</td>
+                  <td>Min</td>
+                  <td>Max</td>
+                  <td>Ref.</td>
+                  <td>Open</td>
+                </tr>
+              </thead>
+                <tr ng-repeat="item in items">
+                  <td>{{item.stock_name}}</td>
+                  <td>{{item.last_price}}</td>
+                  <td>{{item.time}}</td>  
+                  <td>{{item.pct_change}}</td>  
+                  <td>{{item.bid_quantity}}</td>  
+                  <td>{{item.bid}}</td>
+                  <td>{{item.ask}}</td>
+                  <td>{{item.ask_quantity}}</td>
+                  <td>{{item.min}}</td>
+                  <td>{{item.max}}</td>
+                  <td>{{item.ref_price}}</td>
+                  <td>{{item.open_price}}</td>
+                </tr>
+              <tbody>
+           </tbody>
+         </table>
+        </div>
+        
+        <h2>Iterate through index</h2>
+        <div ng-controller="Controller_index">
+          <table>
+            <thead>
+              <tr>
+                <td>Name</td>
+                <td>Last</td>
+                <td>Time</td>  
+                <td>Change</td>  
+                <td>Bid Size</td>  
+                <td>Bid</td>
+                <td>Ask</td>
+                <td>Ask Size</td>
+                <td>Min</td>
+                <td>Max</td>
+                <td>Ref.</td>
+                <td>Open</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="item in items track by $index">
+                <td ng-repeat="field in item track by $index">{{field}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+    </div>
     
   </body>
 </html>

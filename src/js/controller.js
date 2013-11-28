@@ -13,16 +13,12 @@ Copyright 2013 Weswit s.r.l.
    See the License for the specific language governing permissions and
    limitations under the License.
 */
+
+// Access by name
 function Controller($scope) {
-  $scope.items = {
-  };
+  $scope.items = {};
   
-  var items = ["item1","item2","item3","item4","item5","item6","item7","item8","item9","item10"];
-  
-  require(["js/lsClient","Subscription"], function(lsClient,Subscription) {
-    
-    var subscription = new Subscription("MERGE",items,["stock_name","last_price"]);
-    subscription.setDataAdapter("QUOTE_ADAPTER");
+  require(["js/subscription"], function(subscription) {
     
     subscription.addListener({
       onItemUpdate: function(info) {
@@ -37,11 +33,27 @@ function Controller($scope) {
         $scope.$apply();
       }
     });
+  });
+}
+
+// Iterate through index
+function Controller_index($scope) {
+  $scope.items = [];
+  
+  require(["js/subscription"], function(subscription) {
     
-    lsClient.subscribe(subscription);
-    
-    
-    
-    
+    subscription.addListener({
+      onItemUpdate: function(info) {
+        var itemPos = info.getItemPos();
+        if (!$scope.items[itemPos]) {
+          $scope.items[itemPos] = [];
+        }
+        info.forEachChangedField(function(fieldName,fieldPos,val) {
+          $scope.items[itemPos][fieldPos-1] = val;
+        });
+        
+        $scope.$apply();
+      }
+    });
   });
 }  
