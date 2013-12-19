@@ -32,8 +32,8 @@ The above setup will make the first two table work. To also start the ng-grid ve
 -  jQuery is currently hot-linked in the html page: you may want to replace it with a local version and/or to upgrade its version.
 -  Also ng-grid is currently hot-linked in the html page: again, you may want to replace it with a local version and/or to upgrade its version.
 
-You can deploy the demo in order to use the Lightstreamer server as Web server or in any external Web Server you are running. 
-If you choose the former case please create a new folder under <LS_HOME>/pages/ and copy the contents of the src folder of this project there.
+You can deploy this demo inside Lightstreamer internal web server or in any other web server.
+If you choose the former please create a new folder under <LS_HOME>/pages/ and copy the contents of the src folder of this project there.
 
 The client demos configuration assumes that Lightstreamer Server, Lightstreamer Adapters and this client are launched on the same machine. If you need to target a different Lightstreamer server please search for this line:
 ```js
