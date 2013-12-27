@@ -1,4 +1,4 @@
-# Lightstreamer - Basic Stock-List Demo - AngularJS (ng-grid) Client #
+# Lightstreamer - Basic Stock-List Demo - HTML (AngularJS / ng-grid) Client #
 
 <!-- START DESCRIPTION lightstreamer-example-stocklist-client-angular -->
 
