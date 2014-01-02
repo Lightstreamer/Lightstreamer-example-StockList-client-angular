@@ -15,7 +15,7 @@ This page uses the <b>JavaScript Client API for Lightstreamer</b> to handle the 
 A Lightstreamer Subscription is used for subscribing to the data. The onItemUpdate callback implementation fills an object that is used by AngularJS to populate the HTML.
 Three different approaches to the data display are shown; the first two use "vanilla" AngularJS while the third one is based on [ng-grid](http://angular-ui.github.io/ng-grid/)
 
-The demo includes the following client-side technologies:
+The demo includes the following client-side functionalities:
 * A [Subscription](http://www.lightstreamer.com/docs/client_javascript_uni_api/Subscription.html) containing 10 items, subscribed to in **MERGE** mode.
 
 <!-- END DESCRIPTION lightstreamer-example-stocklist-client-angular -->
