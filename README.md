@@ -51,7 +51,7 @@ The demo is now ready to be launched.
 
 # See Also #
 
-## Lightstreamer Adapters Needed by These Demo Clients ##
+## Lightstreamer Adapters Needed by This Demo Client ##
 <!-- START RELATED_ENTRIES -->
 
 * [Lightstreamer - Stock-List Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java)
