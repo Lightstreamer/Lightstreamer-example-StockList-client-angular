@@ -21,7 +21,7 @@ Three different approaches to the data display are shown; the first two use "van
 The demo includes the following client-side functionalities:
 * A [Subscription](http://www.lightstreamer.com/docs/client_javascript_uni_api/Subscription.html) containing 10 items, subscribed to in **MERGE** mode.
 
-Further details aboout integration between AngularJS and Lightstreamer are discussed in this blog post: [Yet Another Integration: AngularJS](http://blog.lightstreamer.com/2013/11/yet-another-integration-angularjs.html).
+Further details about integration between AngularJS and Lightstreamer are discussed in this blog post: "[Yet Another Integration: AngularJS](http://blog.lightstreamer.com/2013/11/yet-another-integration-angularjs.html)".
 
 <!-- END DESCRIPTION lightstreamer-example-stocklist-client-angular -->
 
