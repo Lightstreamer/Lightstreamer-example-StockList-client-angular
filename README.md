@@ -59,6 +59,7 @@ The demo is now ready to be launched.
 ### Lightstreamer Adapters Needed by This Demo Client
 <!-- START RELATED_ENTRIES -->
 
+* [Lightstreamer - Basic Stock-List Demo - HTML (Angular2) Client](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-angular2)
 * [Lightstreamer - Stock-List Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-adapter-java)
 * [Lightstreamer - Reusable Metadata Adapters - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-ReusableMetadata-adapter-java)
 
