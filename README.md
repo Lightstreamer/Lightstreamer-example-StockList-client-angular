@@ -66,7 +66,7 @@ The demo is now ready to be launched.
 
 ### Related Projects
 
-* [Lightstreamer - Basic Stock-List Demo - HTML (Angular2) Client](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-angular2)
+* [Lightstreamer - Basic Stock-List Demo - HTML (Angular) Client](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-angular2)
 * [Lightstreamer - Stock-List Demos - HTML Clients](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-client-javascript)
 
 ## Lightstreamer Compatibility Notes
