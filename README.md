@@ -6,8 +6,8 @@ A simple stocklist demo application showing integration between [AngularJS](http
 
 ## Live Demo
 
-[![screenshot](screen_angular_large.png)](http://demos.lightstreamer.com/AngularJSDemo)<br>
-### [![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/AngularJSDemo)<br>
+[![screenshot](screen_angular_large.png)](https://demos.lightstreamer.com/AngularJSDemo/)<br>
+### [![](http://demos.lightstreamer.com/site/img/play.png) View live demo](https://demos.lightstreamer.com/AngularJSDemo/)<br>
 
 ## Details
 
